@@ -1,0 +1,19 @@
+<!--
+  @description       : 
+  @author            : Somnath Sharma
+  @group             : 
+  @last modified on  : 26-04-2023
+  @last modified by  : Somnath Sharma
+-->
+<template>
+
+    <lightning-card>
+        <template if:true={errors}>
+            <p>{errors}</p>
+        </template>
+        <template if:true={contacts.data}>
+            <lightning-datatable key-field="Id" data={contacts.data} columns={columns}>
+            </lightning-datatable>
+        </template>
+    </lightning-card>
+</template>
